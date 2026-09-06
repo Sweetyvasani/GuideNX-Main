@@ -240,7 +240,7 @@ header .brand-name {
 }
 
 /* ================== HERO ================== */
-.hero {
+.guidenx-hero {
   display: flex;
   justify-content: center; /* ✅ aligns text to the center */
   align-items: center; 
@@ -259,7 +259,7 @@ header .brand-name {
 }
 
 /* Dark overlay */
-.hero::before {
+.guidenx-hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
