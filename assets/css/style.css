@@ -1,0 +1,485 @@
+/* ================== GLOBAL ================== */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Force hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Headings & Brand Font */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;  
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0b1f3b;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ================== HEADER ================== */
+header {
+  position: fixed;          
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;   /* keeps logo + text aligned vertically */
+  justify-content: space-between;   /* ✅ logo left, nav right */
+  background: #fff;        /* White background */
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  box-sizing: border-box;   /* ✅ include padding inside width */
+}
+
+/* Brand block (logo + text) */
+header .brand {
+  display: flex;
+  align-items: center;   /* ✅ keeps text vertically centered with logo */
+  text-decoration: none;
+  flex-shrink: 0;   /* ✅ logo never shrinks */
+}
+
+header img {
+  height: 64px;   /* mobile / default */
+  width: auto;
+}
+
+.brand-bold {
+    color: #3ea5cf;      
+    font-weight: 700;
+}
+
+.brand-accent {
+    color: #D4A73F;      /* Same orange as footer */ 
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  header img {
+    height: 56px; /* desktop */
+  }
+}
+
+header .brand-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #001F54;   /* Navy text */
+  margin-left: 10px;
+  white-space: nowrap;   /* ✅ keeps text on one line */
+}
+
+/* navigation menu */
+
+header nav {
+  flex: 1;               /* ✅ nav takes remaining space */
+  display: flex;
+  justify-content: flex-end; /* ✅ push items to the right */
+  min-width: 0;          /* ✅ allow shrinking */
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;       /* ✅ prevent overflow by wrapping */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 20px;
+  white-space: nowrap;   /* ✅ keep items on one line each */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 16px;  /* ✅ slightly smaller text */
+  font-weight: 500;
+  color: #6B7A89;  
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #3ea5cf;
+  border-bottom: 2px solid #3ea5cf;
+  padding-bottom: 2px;
+}
+
+/* Push page content down so it doesn’t hide under sticky nav */
+body {
+  padding-top: 70px; /* adjust depending on navbar height */
+}
+
+/* ================== MOBILE NAV + HERO TWEAKS (append only) ================== */
+
+/* mobile hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  color: #0a2540;
+  background: transparent;
+  border-radius: 6px;
+}
+
+/* mobile menu container (hidden by default) */
+.mobile-nav {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  top: 72px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .32s ease, opacity .24s ease;
+  z-index: 1500;
+}
+
+.mobile-nav.open {
+  max-height: 520px;
+  opacity: 1;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: #0a2540;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.mobile-nav a:hover {
+  background: rgba(20,184,166,0.06);
+  color: #14b8a6;
+}
+
+/* Small-screen overrides */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  header nav { display: none !important; }
+
+  header img {
+      display: block;
+      height: 42px;
+      width: auto;
+  }
+  
+    body { padding-top: 62px; }
+  .mobile-nav { top: 62px; left: 10px; right: 10px; }
+
+
+  /* Fix brand overflow on mobile */
+
+  header {
+    justify-content: space-between;
+    padding: 12px 18px;
+}
+  
+header .brand {
+  flex-shrink: 1;   /* allow brand to shrink */
+  min-width: 0;     /* prevent overflow in flex */
+  width: auto;
+}
+
+
+header .brand-name {
+  font-size: 26px;   /* smaller so full name fits */
+  margin-left: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.menu-toggle{
+    display:block;
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:42px;
+    height:42px;
+
+    border:none;
+    background:none;
+
+    font-size:28px;
+    color:#0B1F3A;
+
+    cursor:pointer;
+
+    z-index:2000;
+}  
+}
+
+/* =========================================================
+   GuideNX Search — Hero Layout
+   STEP 2 — Logo + Left Aligned Content
+========================================================= */
+
+/* Large GuideNX brand mark */
+.recruit-hero .hero-brand-mark {
+  position: absolute;
+  
+  right: -2%;
+  top: 53%;
+  
+  transform: translateY(-50%);
+  
+  width: 620px;
+  height: 620px;
+
+  transform: translateY(-50%);
+
+  background: transparent;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.recruit-hero .hero-brand-mark img {
+  display: block;
+  
+  width: 100%;
+  height: 100%;
+  
+  object-fit: contain;
+
+  opacity: 0.11;
+}
+
+/* Move hero content toward the left */
+.recruit-hero .hero-content {
+  align-items: flex-start;
+  text-align: left;
+
+  max-width: 1200px;
+}
+
+/* Left-align headline */
+.recruit-hero h1 {
+  text-align: left;
+}
+
+/* Left-align supporting content */
+.recruit-hero .hero-subtext {
+  text-align: left;
+}
+
+/* Left-align tagline */
+.recruit-hero .hero-tagline {
+  text-align: left;
+}
+
+/* Keep CTA on the left */
+.recruit-hero .hero-buttons {
+  justify-content: flex-start;
+}
+
+/* Keep the logo behind the content */
+.recruit-hero .hero-content {
+  z-index: 2;
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .recruit-hero .hero-brand-mark {
+    width: 260px;
+    height: 260px;
+    right: 50%;
+    top: 72%;
+    transform: translate(50%, -50%);
+    opacity: 0.08;
+  }
+
+  .recruit-hero .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .recruit-hero h1,
+  .recruit-hero .hero-subtext,
+  .recruit-hero .hero-tagline {
+    text-align: center;
+  }
+
+  .recruit-hero .hero-buttons {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   GuideNX Hero Watermark
+========================================================= */
+
+.recruit-hero .hero-brand-mark {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: 6%;
+  top: 53%;
+
+  transform: translateY(-50%);
+
+
+  background: transparent;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+.recruit-hero .hero-brand-mark img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  display: block;
+
+  opacity: 0.11;
+}
+
+
+
+
+/* =========================================================
+   GuideNX Hero — Left Content Position
+========================================================= */
+
+.recruit-hero .hero-content {
+  width: calc(100% - 160px);
+  max-width: 1500px;
+
+  margin-left: calc(50% - 750px - 75px);
+  margin-right: auto;
+
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+@media (max-width: 768px) {
+
+  .recruit-hero .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    align-items: center;
+    text-align: center;
+  }
+
+  .recruit-hero .hero-brand-mark {
+    width: 260px;
+    height: 260px;
+
+    right: 50%;
+    top: 72%;
+
+    transform: translate(50%, -50%);
+
+    opacity: 0.07;
+  }
+
+  .recruit-hero .watermark-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* =========================================================
+   GuideNX Navbar Brand — Option 1
+   GuideNX + Gray Search
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Brand text container */
+.brand-name {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+
+  margin-left: 10px;
+
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* GuideNX wordmark */
+.brand-main {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.brand-guide {
+  color: #3EA5CF;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.brand-nx {
+  color: #D4A017;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+/* Search */
+.brand-search {
+  color: #6B7A89;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+
+  line-height: 1;
+}
