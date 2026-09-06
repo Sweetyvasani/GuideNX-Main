@@ -396,7 +396,7 @@ header nav ul li a:hover {
 
   
   width: calc(100% - 160px);
-  max-width: 1500px;
+  max-width: 1200px;
 
   margin-left: calc(50% - 750px - 75px);
   margin-right: auto;
