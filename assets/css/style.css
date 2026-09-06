@@ -1,155 +1,241 @@
-/* ================== GLOBAL ================== */
+/* =========================================================
+   GuideNX MAIN WEBSITE
+   FINAL CLEAN CSS
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
+  padding-top: 70px;
   font-family: 'Lato', sans-serif;
   color: #333;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* Force hide hamburger on desktop */
-.menu-toggle {
-  display: none;
-}
-
-/* Headings & Brand Font */
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;  
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-brand {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #0b1f3b;
+  color: #0B1F3A;
 }
 
-html, body {
-  overflow-x: hidden;
-}
 
-/* ================== HEADER ================== */
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 header {
-  position: fixed;          
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+
   display: flex;
-  align-items: center;   /* keeps logo + text aligned vertically */
-  justify-content: space-between;   /* ✅ logo left, nav right */
-  background: #fff;        /* White background */
+  align-items: center;
+  justify-content: space-between;
+
+  background: #FFFFFF;
+
   padding: 10px 20px;
+
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
-  box-sizing: border-box;   /* ✅ include padding inside width */
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
 }
 
-/* Brand block (logo + text) */
-header .brand {
+
+/* ---------------------------------------------------------
+   Header Brand
+   --------------------------------------------------------- */
+
+header .brand,
+.brand {
   display: flex;
-  align-items: center;   /* ✅ keeps text vertically centered with logo */
+  align-items: center;
   text-decoration: none;
-  flex-shrink: 0;   /* ✅ logo never shrinks */
+  flex-shrink: 0;
 }
 
 header img {
-  height: 64px;   /* mobile / default */
+  height: 56px;
   width: auto;
+  display: block;
 }
 
+header .brand-name,
+.brand-name {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+
+  margin-left: 10px;
+
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+/* GuideNX wordmark */
+
+.brand-main {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.brand-guide {
+  color: #3EA5CF;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand-nx {
+  color: #D4A017;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+
+/* Recruit / descriptor */
+
+.brand-search {
+  color: #6B7A89;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: 1;
+}
+
+
+/* Legacy brand classes */
+
 .brand-bold {
-    color: #3ea5cf;      
-    font-weight: 700;
+  color: #3EA5CF;
+  font-weight: 700;
 }
 
 .brand-accent {
-    color: #D4A73F;      /* Same orange as footer */ 
-    font-weight: 700;
+  color: #D4A73F;
+  font-weight: 700;
 }
 
-@media (min-width: 1024px) {
-  header img {
-    height: 56px; /* desktop */
-  }
-}
 
-header .brand-name {
-  font-size: 24px;
-  font-weight: 600;
-  color: #001F54;   /* Navy text */
-  margin-left: 10px;
-  white-space: nowrap;   /* ✅ keeps text on one line */
-}
-
-/* navigation menu */
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
 
 header nav {
-  flex: 1;               /* ✅ nav takes remaining space */
+  flex: 1;
   display: flex;
-  justify-content: flex-end; /* ✅ push items to the right */
-  min-width: 0;          /* ✅ allow shrinking */
+  justify-content: flex-end;
+  min-width: 0;
 }
 
 header nav ul {
   display: flex;
-  flex-wrap: wrap;       /* ✅ prevent overflow by wrapping */
+  flex-wrap: nowrap;
+
   list-style: none;
+
   margin: 0;
   padding: 0;
 }
 
 header nav ul li {
   margin-left: 20px;
-  white-space: nowrap;   /* ✅ keep items on one line each */
+  white-space: nowrap;
 }
 
 header nav ul li a {
   text-decoration: none;
-  font-size: 16px;  /* ✅ slightly smaller text */
+
+  font-size: 16px;
   font-weight: 500;
-  color: #6B7A89;  
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+
+  color: #6B7A89;
+
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #3EA5CF;
 }
 
 header nav ul li a:hover {
-  color: #3ea5cf;
-  border-bottom: 2px solid #3ea5cf;
+  border-bottom: 2px solid #3EA5CF;
   padding-bottom: 2px;
 }
 
-/* Push page content down so it doesn’t hide under sticky nav */
-body {
-  padding-top: 70px; /* adjust depending on navbar height */
-}
 
-/* ================== MOBILE NAV + HERO TWEAKS (append only) ================== */
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-/* mobile hamburger button (hidden on desktop) */
 .menu-toggle {
   display: none;
+
   background: none;
   border: none;
-  font-size: 22px;
+
+  font-size: 28px;
   line-height: 1;
+
   cursor: pointer;
+
   padding: 8px;
-  color: #0a2540;
-  background: transparent;
+
+  color: #0B1F3A;
+
   border-radius: 6px;
 }
 
-/* mobile menu container (hidden by default) */
 .mobile-nav {
   position: fixed;
-  left: 12px;
-  right: 12px;
-  top: 72px;
-  background: #fff;
+
+  left: 10px;
+  right: 10px;
+  top: 62px;
+
+  background: #FFFFFF;
+
   border-radius: 12px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+
   overflow: hidden;
+
   max-height: 0;
   opacity: 0;
-  transition: max-height .32s ease, opacity .24s ease;
+
+  transition:
+    max-height 0.32s ease,
+    opacity 0.24s ease;
+
   z-index: 1500;
 }
 
@@ -160,137 +246,170 @@ body {
 
 .mobile-nav ul {
   list-style: none;
+
   margin: 0;
   padding: 12px;
+
   display: flex;
   flex-direction: column;
+
   gap: 6px;
 }
 
 .mobile-nav a {
   display: block;
+
   padding: 12px 14px;
+
   text-decoration: none;
-  color: #0a2540;
+
+  color: #0B1F3A;
+
   font-weight: 600;
+
   border-radius: 8px;
 }
 
-.mobile-nav a:hover {
-  background: rgba(20,184,166,0.06);
-  color: #14b8a6;
-}
-
-/* Small-screen overrides */
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-  header nav { display: none !important; }
-
-  header img {
-      display: block;
-      height: 42px;
-      width: auto;
-  }
-  
-    body { padding-top: 62px; }
-  .mobile-nav { top: 62px; left: 10px; right: 10px; }
-
-
-  /* Fix brand overflow on mobile */
-
-  header {
-    justify-content: space-between;
-    padding: 12px 18px;
-}
-  
-header .brand {
-  flex-shrink: 1;   /* allow brand to shrink */
-  min-width: 0;     /* prevent overflow in flex */
-  width: auto;
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  background: rgba(62, 165, 207, 0.06);
+  color: #3EA5CF;
 }
 
 
-header .brand-name {
-  font-size: 26px;   /* smaller so full name fits */
-  margin-left: 0;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.menu-toggle{
-    display:block;
-    position:absolute;
-    right:16px;
-    top:50%;
-    transform:translateY(-50%);
-
-    width:42px;
-    height:42px;
-
-    border:none;
-    background:none;
-
-    font-size:28px;
-    color:#0B1F3A;
-
-    cursor:pointer;
-
-    z-index:2000;
-}  
-}
-
-
-/* ===============================
-   Hero Section - GuideNX Search
-================================ */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .guidenx-hero {
   position: relative;
+
   background-color: #0B1F3A;
-  color: #ffffff;
-    display: flex;
-  padding-top: 60px;
-  padding-bottom: 80px;
+
+  color: #FFFFFF;
+
+  min-height: 580px;
+
+  display: flex;
+  align-items: center;
+
   overflow: hidden;
-      min-height: 70vh;
-    align-items: center;
-  justify-content: center;
+
+  padding: 40px 60px 80px;
+
+  isolation: isolate;
 }
 
-/* Subtle grid overlay */
+
+/* ---------------------------------------------------------
+   Subtle Grid Overlay
+   --------------------------------------------------------- */
+
 .guidenx-hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+
   background-size: 60px 60px;
+
   pointer-events: none;
+
+  z-index: 0;
 }
 
-/* Soft blueprint texture overlay */
+
+/* ---------------------------------------------------------
+   Soft Blueprint Texture
+   --------------------------------------------------------- */
+
 .guidenx-hero .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05), transparent 60%);
+
+  background:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(255, 255, 255, 0.05),
+      transparent 60%
+    );
+
   pointer-events: none;
+
+  z-index: 0;
 }
+
+
+/* =========================================================
+   HERO WATERMARK
+   ========================================================= */
+
+.guidenx-hero .hero-brand-mark {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: 5%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: transparent;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.guidenx-hero .hero-brand-mark img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  opacity: 0.11;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .guidenx-hero .hero-content {
   position: relative;
-  max-width: 1200px;
+
+  z-index: 2;
+
   width: 100%;
-    z-index: 2;
-margin-bottom: 0;
-  text-align: center;
+  max-width: 1200px;
+
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  
+
+  align-items: flex-start;
+
+  text-align: left;
+
   opacity: 0;
+
   transform: translateY(25px);
+
   animation: fadeUp 0.8s ease forwards;
 }
 
@@ -302,242 +421,291 @@ margin-bottom: 0;
 }
 
 
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
+
 .guidenx-hero .hero-eyebrow {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
-  padding: 12px 22px;
-  border: 1px solid rgba(62,165,207,0.45);
+
+  padding: 10px 20px;
+
+  border: 1px solid rgba(62, 165, 207, 0.45);
+
   border-radius: 999px;
-  background: rgba(62,165,207,0.08);
-  color: #3ea5cf;
-    font-size: 18px;
+
+  background: rgba(62, 165, 207, 0.08);
+
+  color: #3EA5CF;
+
+  font-size: 17px;
   font-weight: 700;
+
   letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    box-shadow:
-      0 0 12px rgba(62,165,207,0.12),
-  0 0 24px rgba(62,165,207,0.05);
+
+  text-transform: uppercase;
+
+  margin-bottom: 16px;
+
+  box-shadow:
+    0 0 12px rgba(62, 165, 207, 0.12),
+    0 0 24px rgba(62, 165, 207, 0.05);
 
   animation: eyebrowPulse 3s ease-in-out infinite;
-  }
+}
 
 @keyframes eyebrowPulse {
 
   0% {
     box-shadow:
-      0 0 12px rgba(62,165,207,0.10),
-      0 0 24px rgba(62,165,207,0.04);
+      0 0 12px rgba(62, 165, 207, 0.10),
+      0 0 24px rgba(62, 165, 207, 0.04);
   }
 
   50% {
     box-shadow:
-      0 0 20px rgba(62,165,207,0.25),
-      0 0 40px rgba(62,165,207,0.10);
+      0 0 20px rgba(62, 165, 207, 0.25),
+      0 0 40px rgba(62, 165, 207, 0.10);
   }
 
   100% {
     box-shadow:
-      0 0 12px rgba(62,165,207,0.10),
-      0 0 24px rgba(62,165,207,0.04);
+      0 0 12px rgba(62, 165, 207, 0.10),
+      0 0 24px rgba(62, 165, 207, 0.04);
   }
+
 }
+
+
+/* Eyebrow dot */
 
 .eyebrow-dot {
   width: 8px;
   height: 8px;
+
+  flex-shrink: 0;
+
   border-radius: 50%;
-  background: #D4A73F;
+
+  background: #D4A017;
+
   margin-right: 10px;
 
   box-shadow:
-    0 0 8px #D4A73F,
-    0 0 16px #D4A73F;
+    0 0 8px #D4A017,
+    0 0 16px #D4A017;
 
   animation: dotPulse 2s ease-in-out infinite;
 }
 
 @keyframes dotPulse {
+
   50% {
     transform: scale(1.25);
   }
+
 }
 
+
+/* Eyebrow text */
+
 .eyebrow-text {
-    display: inline-block;
-    animation: eyebrowFloat 3s ease-in-out infinite;
+  display: inline-block;
+
+  animation: eyebrowFloat 3s ease-in-out infinite;
 }
 
 @keyframes eyebrowFloat {
 
-    0% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-2px);
-    }
+  50% {
+    transform: translateY(-2px);
+  }
 
-    100% {
-        transform: translateY(0px);
-    }
+  100% {
+    transform: translateY(0);
+  }
 
 }
 
+
+/* =========================================================
+   HERO HEADLINE
+   ========================================================= */
+
 .guidenx-hero h1 {
-  font-size: 68px;
+  margin: 0 0 18px;
+
+  max-width: 850px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 62px;
+
   font-weight: 600;
-  line-height: 1.05;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-  max-width: 1100px;
-  text-align: center;
+
+  line-height: 1.06;
+
+  letter-spacing: -1.2px;
+
+  text-align: left;
+
   color: #F8F9FB;
 }
 
-.hero-accent {
-    color: #D4A73F;      /* Same orange as footer */ 
-  white-space: nowrap;
-  background: linear-gradient(
-        135deg,
-        #8F5B1E 0%,
-        #B67A2A 18%,
-        #D4A73F 38%,
-        #F2D48A 50%,
-        #D4A73F 62%,
-        #B67A2A 82%,
-        #8F5B1E 100%
-    );
-  
--webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    font-weight: 800;
-}
-
-
-
 .guidenx-hero h1 .hero-line {
   display: block;
-  }
+}
+
+
+/* Gold headline accents */
+
+.hero-accent {
+  white-space: nowrap;
+
+  background: linear-gradient(
+    135deg,
+    #8F5B1E 0%,
+    #B67A2A 18%,
+    #D4A73F 38%,
+    #F2D48A 50%,
+    #D4A73F 62%,
+    #B67A2A 82%,
+    #8F5B1E 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SERVICE DESCRIPTOR
+   ========================================================= */
+
+.guidenx-hero .hero-tagline {
+  margin: 10px 0 18px;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  letter-spacing: 0.3px;
+
+  color: #3EA5CF;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   HERO SUPPORTING TEXT
+   ========================================================= */
 
 .guidenx-hero .hero-subtext {
-  font-size: 20px;
-  line-height: 1.8;
-  opacity: 0.9;
-  margin-bottom: 0px;
-  max-width: 850px;
-    text-align: center;
-  color: rgba(255,255,255,0.82);
+  max-width: 820px;
+
+  margin: 0;
+
+  font-size: 18px;
+
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  text-align: left;
 }
 
-.guidenx-hero .hero-audience {
-  font-size: 15px;
-  opacity: 0.7;
-  margin-bottom: 42px;
-}
 
-.hero-tagline {
-  font-size: 24px;
-  font-weight: 600;
-  color: #3ea5cf;
-  margin: 12px 0 18px;
-  line-height: 1.3;
-  text-align: center;
-}
+/* =========================================================
+   HERO CTA
+   ========================================================= */
 
-/* ================================
-   GuideNX Brand Tagline
-   ================================ */
-
-.guidenx-brand-tagline {
-  margin: 18px 0 32px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  line-height: 1.4;
-  color: #ffffff;
-  text-shadow: none;
-  animation: none;
-}
-
-.guidenx-brand-tagline .tagline-guide {
-  color: #3EA5CF;
-}
-
-.guidenx-brand-tagline .tagline-grow {
-  color: #ffffff;
-}
-
-.guidenx-brand-tagline .tagline-excel {
-  color: #D4A017;
-}
-
-/* Buttons */
 .guidenx-hero .hero-buttons {
   display: flex;
-  justify-content: center;
-   margin-top: 32px;
-}
 
-@media (max-width: 768px) {
-  .hero-buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  justify-content: flex-start;
+
+  margin-top: 28px;
 }
 
 .guidenx-hero .btn-primary {
-  background: linear-gradient(
-135deg,
-#7a4d22 0%,
-#a56a2a 25%,
-#d39a4d 50%,
-#e9c27a 70%,
-#a56a2a 100%
-);
-  
-  color: #0B1F3A;
-  padding: 18px 42px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.35s ease;
-  border: 1px solid rgba(255,255,255,0.12);
-  
-    box-shadow:
-      0 12px 24px rgba(165,106,42,0.30),
-      inset 0 1px 1px rgba(255,255,255,0.20);
-  
-   position: relative;
+  position: relative;
+
   overflow: hidden;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 36px;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: linear-gradient(
+    135deg,
+    #7A4D22 0%,
+    #A56A2A 25%,
+    #D39A4D 50%,
+    #E9C27A 70%,
+    #A56A2A 100%
+  );
+
+  color: #0B1F3A;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow:
+    0 12px 24px rgba(165, 106, 42, 0.30),
+    inset 0 1px 1px rgba(255, 255, 255, 0.20);
 }
+
+
+/* CTA highlight */
 
 .guidenx-hero .btn-primary::after {
   content: "";
+
   position: absolute;
+
   inset: 1px;
 
   border-radius: 7px;
 
   background: linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.15),
-      transparent 35%
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    transparent 35%
   );
 
   pointer-events: none;
 }
 
-.guidenx-hero .btn-primary:hover {
-  box-shadow:
-      0 14px 30px rgba(212,167,63,0.35),
-      0 0 24px rgba(212,167,63,0.18);
-  transform: translateY(-3px);
-}
+
+/* CTA shine */
 
 .guidenx-hero .btn-primary::before {
   content: "";
@@ -551,13 +719,21 @@ margin-bottom: 0;
   height: 100%;
 
   background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,0.25),
-      transparent
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
   );
 
-  transition: all 0.8s ease;
+  transition: left 0.8s ease;
+}
+
+.guidenx-hero .btn-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(212, 167, 63, 0.35),
+    0 0 24px rgba(212, 167, 63, 0.18);
 }
 
 .guidenx-hero .btn-primary:hover::before {
@@ -565,353 +741,20 @@ margin-bottom: 0;
 }
 
 
-/* Gradient divider */
-.guidenx-hero .hero-divider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #2bb673, #d4a73f, #2c7be5);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-
-    .guidenx-hero{
-        min-height: auto;
-        padding: 90px 24px 70px;
-    }
-
-    .guidenx-hero .hero-content{
-        max-width:100%;
-    }
-
-    .guidenx-hero .hero-eyebrow{
-
-        padding:12px 18px;
-        font-size:15px;
-        line-height:1.4;
-
-        max-width:340px;
-        width:100%;
-        justify-content:center;
-
-        margin-bottom:24px;
-    }
-
-    .guidenx-hero h1{
-
-        font-size:34px;
-        line-height:1.08;
-
-        margin-bottom:22px;
-
-        letter-spacing:-0.5px;
-    }
-
-    .guidenx-hero .hero-subtext{
-
-        font-size:14px;
-        line-height:1.7;
-
-        max-width:100%;
-
-        margin-bottom:0;
-    }
-
-    .hero-tagline{
-
-        font-size:20px;
-        line-height:1.4;
-
-        margin:16px 0;
-    }
-
-    .guidenx-hero .hero-buttons{
-
-        width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-      margin-top:30px;
-    }
-
-    .guidenx-hero .btn-primary{
-         width: auto;
-    min-width: 280px;
-    max-width: 320px;
-    padding: 16px 28px;
-    text-align: center;
-    }
-
-}
-
-
-
 /* =========================================================
-   GuideNX Search — Hero Layout
-   STEP 2 — Logo + Left Aligned Content
-========================================================= */
-
-/* Large GuideNX brand mark */
-.guidenx-hero .hero-brand-mark {
-  position: absolute;
-  
-  right: -2%;
-  top: 53%;
-  
-  transform: translateY(-50%);
-  
-  width: 620px;
-  height: 620px;
-
-  transform: translateY(-50%);
-
-  background: transparent;
-
-  pointer-events: none;
-
-  z-index: 1;
-}
-
-.guidenx-hero .hero-brand-mark img {
-  display: block;
-  
-  width: 100%;
-  height: 100%;
-  
-  object-fit: contain;
-
-  opacity: 0.11;
-}
-
-/* Move hero content toward the left */
-.guidenx-hero .hero-content {
-  align-items: flex-start;
-  text-align: left;
-
-  max-width: 1200px;
-}
-
-/* Left-align headline */
-.guidenx-hero h1 {
-  text-align: left;
-}
-
-/* Left-align supporting content */
-.guidenx-hero .hero-subtext {
-  text-align: left;
-}
-
-/* Left-align tagline */
-.guidenx-hero .hero-tagline {
-  text-align: left;
-}
-
-/* Keep CTA on the left */
-.guidenx-hero .hero-buttons {
-  justify-content: flex-start;
-}
-
-/* Keep the logo behind the content */
-.guidenx-hero .hero-content {
-  z-index: 2;
-}
-
-/* =========================================================
-   Mobile
-========================================================= */
-
-@media (max-width: 768px) {
-
-  .guidenx-hero .hero-brand-mark {
-    width: 260px;
-    height: 260px;
-    right: 50%;
-    top: 72%;
-    transform: translate(50%, -50%);
-    opacity: 0.08;
-  }
-
-  .guidenx-hero .hero-content {
-    align-items: center;
-    text-align: center;
-  }
-
-  .guidenx-hero h1,
-  .guidenx-hero .hero-subtext,
-  .guidenx-hero .hero-tagline {
-    text-align: center;
-  }
-
-  .guidenx-hero .hero-buttons {
-    justify-content: center;
-  }
-}
-
-
-/* =========================================================
-   GuideNX Hero Watermark
-========================================================= */
-
-.guidenx-hero .hero-brand-mark {
-  position: absolute;
-
-  width: 620px;
-  height: 620px;
-
-  right: 6%;
-  top: 53%;
-
-  transform: translateY(-50%);
-
-
-  background: transparent;
-
-  pointer-events: none;
-
-  z-index: 1;
-}
-
-
-.guidenx-hero .hero-brand-mark img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-  display: block;
-
-  opacity: 0.11;
-}
-
-
-
-
-/* =========================================================
-   GuideNX Hero — Left Content Position
-========================================================= */
-
-.guidenx-hero .hero-content {
-  width: calc(100% - 160px);
-  max-width: 1500px;
-
-  margin-left: calc(50% - 750px - 75px);
-  margin-right: auto;
-
-  align-items: flex-start;
-  text-align: left;
-}
-
-
-@media (max-width: 768px) {
-
-  .guidenx-hero .hero-content {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-
-    align-items: center;
-    text-align: center;
-  }
-
-  .guidenx-hero .hero-brand-mark {
-    width: 260px;
-    height: 260px;
-
-    right: 50%;
-    top: 72%;
-
-    transform: translate(50%, -50%);
-
-    opacity: 0.07;
-  }
-
-  .guidenx-hero .watermark-dot {
-    width: 12px;
-    height: 12px;
-  }
-}
-
-/* =========================================================
-   GuideNX Navbar Brand — Option 1
-   GuideNX + Gray Search
-========================================================= */
-
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-/* Brand text container */
-.brand-name {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-
-  margin-left: 10px;
-
-  line-height: 1;
-  white-space: nowrap;
-}
-
-/* GuideNX wordmark */
-.brand-main {
-  display: flex;
-  align-items: baseline;
-  line-height: 1;
-}
-
-.brand-guide {
-  color: #3EA5CF;
-
-  font-size: 24px;
-  font-weight: 700;
-
-  letter-spacing: -0.5px;
-}
-
-.brand-nx {
-  color: #D4A017;
-
-  font-size: 24px;
-  font-weight: 700;
-
-  letter-spacing: -0.5px;
-}
-
-/* Search */
-.brand-search {
-  color: #6B7A89;
-
-  font-size: 20px;
-  font-weight: 600;
-
-  letter-spacing: -0.2px;
-
-  line-height: 1;
-}
-
-/* =========================================
-   GuideNX Brand Signature
-   ========================================= */
-
-/* =========================================================
-   CENTERED BRAND TAGLINE
+   GUIDE. GROW. EXCEL.
+   CENTERED BRAND SIGNATURE
    ========================================================= */
 
 .guidenx-hero .guidenx-brand-tagline {
-
   position: absolute;
 
   left: 50%;
-  bottom: 38px;
+  bottom: 24px;
 
   transform: translateX(-50%);
 
-  z-index: 3;
+  z-index: 4;
 
   display: flex;
 
@@ -933,8 +776,8 @@ margin-bottom: 0;
 
 
 /* Tagline words */
-.guidenx-hero .tagline-words {
 
+.guidenx-hero .tagline-words {
   display: flex;
 
   align-items: center;
@@ -953,7 +796,7 @@ margin-bottom: 0;
 }
 
 
-/* Individual brand colors */
+/* Individual tagline colors */
 
 .guidenx-hero .tagline-guide {
   color: #3EA5CF;
@@ -968,10 +811,9 @@ margin-bottom: 0;
 }
 
 
-/* Lines on either side */
+/* Lines either side */
 
 .guidenx-hero .tagline-line {
-
   display: block;
 
   width: 58px;
@@ -985,3 +827,413 @@ margin-bottom: 0;
     #D4A017
   );
 }
+
+
+/* =========================================================
+   HERO DIVIDER
+   ========================================================= */
+
+.guidenx-hero .hero-divider {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #2BB673,
+    #D4A73F,
+    #2C7BE5
+  );
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   DESKTOP LARGE SCREEN
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .guidenx-hero {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .guidenx-hero .hero-content {
+    max-width: 1280px;
+  }
+
+  .guidenx-hero h1 {
+    font-size: 66px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  header img {
+    height: 50px;
+  }
+
+  header nav ul li {
+    margin-left: 14px;
+  }
+
+  header nav ul li a {
+    font-size: 14px;
+  }
+
+  .guidenx-hero {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .guidenx-hero .hero-brand-mark {
+    width: 500px;
+    height: 500px;
+
+    right: -5%;
+
+    opacity: 0.09;
+  }
+
+  .guidenx-hero h1 {
+    font-size: 52px;
+    max-width: 700px;
+  }
+
+  .guidenx-hero .hero-subtext {
+    max-width: 680px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -------------------------------------------------------
+     Body / Header
+     ------------------------------------------------------- */
+
+  body {
+    padding-top: 62px;
+  }
+
+  header {
+    padding: 10px 18px;
+
+    min-height: 62px;
+  }
+
+  header img {
+    height: 42px;
+  }
+
+  header .brand-name {
+    margin-left: 5px;
+  }
+
+  .brand-guide,
+  .brand-nx {
+    font-size: 21px;
+  }
+
+  .brand-search {
+    font-size: 17px;
+  }
+
+
+  /* -------------------------------------------------------
+     Desktop navigation hidden
+     ------------------------------------------------------- */
+
+  header nav {
+    display: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     Hamburger
+     ------------------------------------------------------- */
+
+  .menu-toggle {
+    display: block;
+
+    position: absolute;
+
+    right: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    font-size: 27px;
+
+    z-index: 2000;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Hero
+     ------------------------------------------------------- */
+
+  .guidenx-hero {
+    min-height: 0;
+
+    padding: 72px 24px 88px;
+
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Watermark
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-brand-mark {
+    width: 280px;
+    height: 280px;
+
+    right: 50%;
+    top: 73%;
+
+    transform: translate(50%, -50%);
+
+    opacity: 0.07;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Hero Content
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-content {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Eyebrow
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-eyebrow {
+    padding: 10px 16px;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    max-width: 100%;
+
+    margin-bottom: 22px;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Headline
+     ------------------------------------------------------- */
+
+  .guidenx-hero h1 {
+    max-width: 100%;
+
+    margin-bottom: 20px;
+
+    font-size: 36px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.6px;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Service Descriptor
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-tagline {
+    max-width: 100%;
+
+    margin: 14px 0 18px;
+
+    font-size: 17px;
+
+    line-height: 1.45;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Supporting Text
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-subtext {
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile CTA
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-buttons {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 28px;
+  }
+
+  .guidenx-hero .btn-primary {
+    min-width: 260px;
+
+    padding: 15px 26px;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Brand Tagline
+     ------------------------------------------------------- */
+
+  .guidenx-hero .guidenx-brand-tagline {
+    left: 50%;
+
+    bottom: 22px;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 0 12px;
+
+    transform: translateX(-50%);
+  }
+
+  .guidenx-hero .tagline-words {
+    gap: 8px;
+
+    font-size: 0.88rem;
+
+    letter-spacing: 1px;
+  }
+
+  .guidenx-hero .tagline-line {
+    width: 30px;
+
+    height: 1px;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Divider
+     ------------------------------------------------------- */
+
+  .guidenx-hero .hero-divider {
+    height: 2px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  header {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  header img {
+    height: 38px;
+  }
+
+  .brand-guide,
+  .brand-nx {
+    font-size: 19px;
+  }
+
+  .brand-search {
+    font-size: 15px;
+  }
+
+  .guidenx-hero {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 65px;
+    padding-bottom: 84px;
+  }
+
+  .guidenx-hero h1 {
+    font-size: 32px;
+  }
+
+  .guidenx-hero .hero-tagline {
+    font-size: 15px;
+  }
+
+  .guidenx-hero .hero-subtext {
+    font-size: 13.5px;
+  }
+
+  .guidenx-hero .btn-primary {
+    min-width: 240px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .guidenx-hero .tagline-words {
+    gap: 6px;
+    font-size: 0.78rem;
+    letter-spacing: 0.7px;
+  }
+
+  .guidenx-hero .tagline-line {
+    width: 20px;
+  }
+
+}
+
+
