@@ -893,3 +893,57 @@ margin-bottom: 0;
 
   line-height: 1;
 }
+
+/* =========================================
+   GuideNX Brand Signature
+   ========================================= */
+
+.guidenx-brand-tagline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: 34px 0 34px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1;
+
+  text-shadow: none;
+  animation: none;
+}
+
+.guidenx-brand-tagline .tagline-line {
+  display: block;
+  width: 42px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #3EA5CF,
+    #D4A017
+  );
+
+  flex-shrink: 0;
+}
+
+.guidenx-brand-tagline .tagline-words {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.guidenx-brand-tagline .tagline-guide {
+  color: #3EA5CF;
+}
+
+.guidenx-brand-tagline .tagline-grow {
+  color: #FFFFFF;
+}
+
+.guidenx-brand-tagline .tagline-excel {
+  color: #D4A017;
+}
