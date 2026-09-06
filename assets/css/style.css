@@ -898,16 +898,90 @@ margin-bottom: 0;
    GuideNX Brand Signature
    ========================================= */
 
-/* Center GuideNX tagline */
-.guidenx-brand-tagline {
+/* =========================================================
+   CENTERED BRAND TAGLINE
+   ========================================================= */
+
+.guidenx-hero .guidenx-brand-tagline {
+
   position: absolute;
+
   left: 50%;
   bottom: 38px;
+
   transform: translateX(-50%);
 
+  z-index: 3;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
 
+  gap: 22px;
+
+  width: max-content;
+
   margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  text-shadow: none;
+
+  animation: none;
+}
+
+
+/* Tagline words */
+.guidenx-hero .tagline-words {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  white-space: nowrap;
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* Individual brand colors */
+
+.guidenx-hero .tagline-guide {
+  color: #3EA5CF;
+}
+
+.guidenx-hero .tagline-grow {
+  color: #FFFFFF;
+}
+
+.guidenx-hero .tagline-excel {
+  color: #D4A017;
+}
+
+
+/* Lines on either side */
+
+.guidenx-hero .tagline-line {
+
+  display: block;
+
+  width: 58px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: linear-gradient(
+    90deg,
+    #3EA5CF,
+    #D4A017
+  );
 }
