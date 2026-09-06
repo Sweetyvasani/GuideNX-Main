@@ -448,6 +448,34 @@ margin-bottom: 0;
   text-align: center;
 }
 
+/* ================================
+   GuideNX Brand Tagline
+   ================================ */
+
+.guidenx-brand-tagline {
+  margin: 18px 0 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  color: #ffffff;
+  text-shadow: none;
+  animation: none;
+}
+
+.guidenx-brand-tagline .tagline-guide {
+  color: #3EA5CF;
+}
+
+.guidenx-brand-tagline .tagline-grow {
+  color: #ffffff;
+}
+
+.guidenx-brand-tagline .tagline-excel {
+  color: #D4A017;
+}
+
 /* Buttons */
 .guidenx-hero .hero-buttons {
   display: flex;
