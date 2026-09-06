@@ -288,14 +288,14 @@ header nav ul li a:hover {
 
   color: #FFFFFF;
 
-  min-height: 745px;
+  min-height: 70vh;
 
   display: flex;
   align-items: center;
 
   overflow: hidden;
 
-  padding: 60px 60px 90px;
+  padding-top: 60px;
 
   isolation: isolate;
 }
