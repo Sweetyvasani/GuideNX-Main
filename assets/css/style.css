@@ -245,7 +245,7 @@ header .brand-name {
 ========================================================= */
 
 /* Large GuideNX brand mark */
-.recruit-hero .hero-brand-mark {
+.guidenx-hero .hero-brand-mark {
   position: absolute;
   
   right: -2%;
@@ -265,7 +265,7 @@ header .brand-name {
   z-index: 1;
 }
 
-.recruit-hero .hero-brand-mark img {
+.guidenx-hero .hero-brand-mark img {
   display: block;
   
   width: 100%;
@@ -277,7 +277,7 @@ header .brand-name {
 }
 
 /* Move hero content toward the left */
-.recruit-hero .hero-content {
+.guidenx-hero .hero-content {
   align-items: flex-start;
   text-align: left;
 
@@ -285,27 +285,27 @@ header .brand-name {
 }
 
 /* Left-align headline */
-.recruit-hero h1 {
+.guidenx-hero h1 {
   text-align: left;
 }
 
 /* Left-align supporting content */
-.recruit-hero .hero-subtext {
+.guidenx-hero .hero-subtext {
   text-align: left;
 }
 
 /* Left-align tagline */
-.recruit-hero .hero-tagline {
+.guidenx-hero .hero-tagline {
   text-align: left;
 }
 
 /* Keep CTA on the left */
-.recruit-hero .hero-buttons {
+.guidenx-hero .hero-buttons {
   justify-content: flex-start;
 }
 
 /* Keep the logo behind the content */
-.recruit-hero .hero-content {
+.guidenx-hero .hero-content {
   z-index: 2;
 }
 
@@ -315,7 +315,7 @@ header .brand-name {
 
 @media (max-width: 768px) {
 
-  .recruit-hero .hero-brand-mark {
+  .guidenx-hero .hero-brand-mark {
     width: 260px;
     height: 260px;
     right: 50%;
@@ -324,18 +324,18 @@ header .brand-name {
     opacity: 0.08;
   }
 
-  .recruit-hero .hero-content {
+  .guidenx-hero .hero-content {
     align-items: center;
     text-align: center;
   }
 
-  .recruit-hero h1,
-  .recruit-hero .hero-subtext,
-  .recruit-hero .hero-tagline {
+  .guidenx-hero h1,
+  .guidenx-hero .hero-subtext,
+  .guidenx-hero .hero-tagline {
     text-align: center;
   }
 
-  .recruit-hero .hero-buttons {
+  .guidenx-hero .hero-buttons {
     justify-content: center;
   }
 }
@@ -345,7 +345,7 @@ header .brand-name {
    GuideNX Hero Watermark
 ========================================================= */
 
-.recruit-hero .hero-brand-mark {
+.guidenx-hero .hero-brand-mark {
   position: absolute;
 
   width: 620px;
@@ -365,7 +365,7 @@ header .brand-name {
 }
 
 
-.recruit-hero .hero-brand-mark img {
+.guidenx-hero .hero-brand-mark img {
   width: 100%;
   height: 100%;
 
@@ -382,7 +382,7 @@ header .brand-name {
    GuideNX Hero — Left Content Position
 ========================================================= */
 
-.recruit-hero .hero-content {
+.guidenx-hero .hero-content {
   width: calc(100% - 160px);
   max-width: 1500px;
 
@@ -396,7 +396,7 @@ header .brand-name {
 
 @media (max-width: 768px) {
 
-  .recruit-hero .hero-content {
+  .guidenx-hero .hero-content {
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -406,7 +406,7 @@ header .brand-name {
     text-align: center;
   }
 
-  .recruit-hero .hero-brand-mark {
+  .guidenx-hero .hero-brand-mark {
     width: 260px;
     height: 260px;
 
@@ -418,7 +418,7 @@ header .brand-name {
     opacity: 0.07;
   }
 
-  .recruit-hero .watermark-dot {
+  .guidenx-hero .watermark-dot {
     width: 12px;
     height: 12px;
   }
