@@ -400,6 +400,7 @@ header nav ul li a:hover {
 
     margin-left: max(0px, calc((100vw - 1515px) / 2));
   margin-right: 0;
+   margin-top: -35px;
 
 
     display: flex;
@@ -451,7 +452,7 @@ header nav ul li a:hover {
 
   text-transform: uppercase;
 
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 
   box-shadow:
     0 0 12px rgba(62, 165, 207, 0.12),
@@ -543,7 +544,7 @@ header nav ul li a:hover {
    ========================================================= */
 
 .guidenx-hero h1 {
-  margin: 0 0 18px;
+  margin: 0 0 26px;
 
   max-width: 850px;
 
@@ -597,7 +598,7 @@ header nav ul li a:hover {
    ========================================================= */
 
 .guidenx-hero .hero-tagline {
-  margin: 10px 0 18px;
+  margin: 12px 0 24px;
 
   font-size: 21px;
 
@@ -641,7 +642,7 @@ header nav ul li a:hover {
 
   justify-content: flex-start;
 
-  margin-top: 28px;
+  margin-top: 34px;
 }
 
 .guidenx-hero .btn-primary {
