@@ -452,7 +452,7 @@ header nav ul li a:hover {
 
   text-transform: uppercase;
 
-  margin-bottom: 26px;
+  margin-bottom: 34px;
 
   box-shadow:
     0 0 12px rgba(62, 165, 207, 0.12),
@@ -754,7 +754,7 @@ header nav ul li a:hover {
   position: absolute;
 
   left: 50%;
-  bottom: 24px;
+  bottom: 34px;
 
   transform: translateX(-50%);
 
