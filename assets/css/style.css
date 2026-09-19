@@ -1,6 +1,6 @@
 /* =========================================================
    GuideNX MAIN WEBSITE
-   FINAL CLEAN CSS
+   style.css
    ========================================================= */
 
 
@@ -20,9 +20,13 @@ html {
 body {
   margin: 0;
   padding-top: 70px;
+
   font-family: 'Lato', sans-serif;
+
   color: #333;
+
   line-height: 1.7;
+
   overflow-x: hidden;
 }
 
@@ -32,13 +36,6 @@ h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.navbar-brand {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #0B1F3A;
-}
-
 
 /* =========================================================
    HEADER
@@ -46,99 +43,90 @@ h3 {
 
 header {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
 
+  min-height: 70px;
+
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
-  background: #FFFFFF;
+  padding: 8px 24px;
 
-  padding: 10px 20px;
+  background: #FFFFFF;
 
   z-index: 1000;
 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.10);
 }
 
 
-/* ---------------------------------------------------------
-   Header Brand
-   --------------------------------------------------------- */
+/* =========================================================
+   HEADER BRAND
+   ========================================================= */
 
-header .brand,
-.brand {
+header .brand {
   display: flex;
+
   align-items: center;
+
   text-decoration: none;
+
   flex-shrink: 0;
 }
 
-header img {
-  height: 56px;
+header .logo-img {
+  height: 54px;
+
   width: auto;
+
   display: block;
 }
 
-header .brand-name,
-.brand-name {
+header .brand-name {
   display: flex;
+
   align-items: baseline;
-  gap: 5px;
 
   margin-left: 10px;
 
   line-height: 1;
+
   white-space: nowrap;
 }
 
-
-/* GuideNX wordmark */
-
 .brand-main {
   display: flex;
+
   align-items: baseline;
+
   line-height: 1;
 }
 
 .brand-guide {
   color: #3EA5CF;
+
   font-size: 24px;
+
   font-weight: 700;
+
   letter-spacing: -0.5px;
 }
 
 .brand-nx {
   color: #D4A017;
+
   font-size: 24px;
+
   font-weight: 700;
+
   letter-spacing: -0.5px;
-}
-
-
-/* Recruit / descriptor */
-
-.brand-search {
-  color: #6B7A89;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-  line-height: 1;
-}
-
-
-/* Legacy brand classes */
-
-.brand-bold {
-  color: #3EA5CF;
-  font-weight: 700;
-}
-
-.brand-accent {
-  color: #D4A73F;
-  font-weight: 700;
 }
 
 
@@ -148,14 +136,18 @@ header .brand-name,
 
 header nav {
   flex: 1;
+
   display: flex;
+
   justify-content: flex-end;
+
   min-width: 0;
 }
 
 header nav ul {
   display: flex;
-  flex-wrap: nowrap;
+
+  align-items: center;
 
   list-style: none;
 
@@ -164,21 +156,23 @@ header nav ul {
 }
 
 header nav ul li {
-  margin-left: 20px;
+  margin-left: 22px;
+
   white-space: nowrap;
 }
 
 header nav ul li a {
   text-decoration: none;
 
-  font-size: 16px;
-  font-weight: 500;
-
   color: #6B7A89;
 
+  font-size: 15px;
+
+  font-weight: 500;
+
   transition:
-    color 0.3s ease,
-    border-bottom 0.3s ease;
+    color 0.25s ease,
+    border-bottom 0.25s ease;
 }
 
 header nav ul li a:hover,
@@ -188,48 +182,62 @@ header nav ul li a.active {
 
 header nav ul li a:hover {
   border-bottom: 2px solid #3EA5CF;
+
   padding-bottom: 2px;
 }
 
 
 /* =========================================================
-   MOBILE MENU
+   MOBILE MENU BUTTON
    ========================================================= */
 
 .menu-toggle {
   display: none;
 
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
   background: none;
+
   border: none;
 
-  font-size: 28px;
-  line-height: 1;
-
-  cursor: pointer;
-
-  padding: 8px;
+  border-radius: 6px;
 
   color: #0B1F3A;
 
-  border-radius: 6px;
+  font-size: 27px;
+
+  line-height: 1;
+
+  cursor: pointer;
 }
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
 
 .mobile-nav {
   position: fixed;
 
+  top: 62px;
+
   left: 10px;
   right: 10px;
-  top: 62px;
 
   background: #FFFFFF;
 
   border-radius: 12px;
 
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.12);
 
   overflow: hidden;
 
   max-height: 0;
+
   opacity: 0;
 
   transition:
@@ -241,6 +249,7 @@ header nav ul li a:hover {
 
 .mobile-nav.open {
   max-height: 520px;
+
   opacity: 1;
 }
 
@@ -248,9 +257,11 @@ header nav ul li a:hover {
   list-style: none;
 
   margin: 0;
+
   padding: 12px;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 6px;
@@ -273,6 +284,7 @@ header nav ul li a:hover {
 .mobile-nav a:hover,
 .mobile-nav a.active {
   background: rgba(62, 165, 207, 0.06);
+
   color: #3EA5CF;
 }
 
@@ -284,31 +296,33 @@ header nav ul li a:hover {
 .guidenx-hero {
   position: relative;
 
-  background-color: #0B1F3A;
-
-  color: #FFFFFF;
-
   min-height: 745px;
 
   display: flex;
+
   align-items: center;
 
   overflow: hidden;
 
-  padding-top: 60px;
+  padding: 60px 0 90px;
+
+  background-color: #0B1F3A;
+
+  color: #FFFFFF;
 
   isolation: isolate;
 }
 
 
-/* ---------------------------------------------------------
-   Subtle Grid Overlay
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO GRID
+   ========================================================= */
 
 .guidenx-hero::before {
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   background-image:
@@ -330,12 +344,13 @@ header nav ul li a:hover {
 }
 
 
-/* ---------------------------------------------------------
-   Soft Blueprint Texture
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO SOFT LIGHT
+   ========================================================= */
 
-.guidenx-hero .hero-overlay {
+.hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -355,13 +370,14 @@ header nav ul li a:hover {
    HERO WATERMARK
    ========================================================= */
 
-.guidenx-hero .hero-brand-mark {
+.hero-brand-mark {
   position: absolute;
 
   width: 620px;
   height: 620px;
 
   right: 5%;
+
   top: 50%;
 
   transform: translateY(-50%);
@@ -373,7 +389,7 @@ header nav ul li a:hover {
   z-index: 1;
 }
 
-.guidenx-hero .hero-brand-mark img {
+.hero-brand-mark img {
   width: 100%;
   height: 100%;
 
@@ -381,7 +397,7 @@ header nav ul li a:hover {
 
   display: block;
 
-  opacity: 0.07;
+  opacity: 0.11;
 }
 
 
@@ -389,21 +405,37 @@ header nav ul li a:hover {
    HERO CONTENT
    ========================================================= */
 
-.guidenx-hero .hero-content {
+.hero-content {
   position: relative;
 
   z-index: 2;
 
-  
-   width: 100%;
-  max-width: 1200px;
+  width: 100%;
 
-    margin-left: max(0px, calc((100vw - 1515px) / 2));
+  max-width: 1280px;
+
+  /*
+     This controls horizontal positioning on
+     large desktop screens.
+  */
+
+  margin-left: max(
+    0px,
+    calc((100vw - 1470px) / 2)
+  );
+
   margin-right: 0;
-   margin-top: -35px;
 
+  /*
+     This controls vertical positioning.
+     Negative value moves the content upward
+     without changing Hero height.
+  */
 
-    display: flex;
+  top: -45px;
+
+  display: flex;
+
   flex-direction: column;
 
   align-items: flex-start;
@@ -412,16 +444,20 @@ header nav ul li a:hover {
 
   opacity: 0;
 
-  transform: translateY(25px);
-
-  animation: fadeUp 0.8s ease forwards;
+  animation:
+    heroFadeIn 0.7s ease forwards;
 }
 
-@keyframes fadeUp {
+@keyframes heroFadeIn {
+
+  from {
+    opacity: 0;
+  }
+
   to {
     opacity: 1;
-    transform: translateY(0);
   }
+
 }
 
 
@@ -429,13 +465,16 @@ header nav ul li a:hover {
    HERO EYEBROW
    ========================================================= */
 
-.guidenx-hero .hero-eyebrow {
+.hero-eyebrow {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 10px 20px;
+
+  margin-bottom: 34px;
 
   border: 1px solid rgba(62, 165, 207, 0.45);
 
@@ -446,45 +485,22 @@ header nav ul li a:hover {
   color: #3EA5CF;
 
   font-size: 17px;
+
   font-weight: 700;
 
   letter-spacing: 1px;
 
-  text-transform: uppercase;
+  line-height: 1.2;
 
-  margin-bottom: 34px;
+  text-transform: uppercase;
 
   box-shadow:
     0 0 12px rgba(62, 165, 207, 0.12),
     0 0 24px rgba(62, 165, 207, 0.05);
-
-  animation: eyebrowPulse 3s ease-in-out infinite;
-}
-
-@keyframes eyebrowPulse {
-
-  0% {
-    box-shadow:
-      0 0 12px rgba(62, 165, 207, 0.10),
-      0 0 24px rgba(62, 165, 207, 0.04);
-  }
-
-  50% {
-    box-shadow:
-      0 0 20px rgba(62, 165, 207, 0.25),
-      0 0 40px rgba(62, 165, 207, 0.10);
-  }
-
-  100% {
-    box-shadow:
-      0 0 12px rgba(62, 165, 207, 0.10),
-      0 0 24px rgba(62, 165, 207, 0.04);
-  }
-
 }
 
 
-/* Eyebrow dot */
+/* Eyebrow Dot */
 
 .eyebrow-dot {
   width: 8px;
@@ -492,50 +508,15 @@ header nav ul li a:hover {
 
   flex-shrink: 0;
 
+  margin-right: 10px;
+
   border-radius: 50%;
 
   background: #D4A017;
 
-  margin-right: 10px;
-
   box-shadow:
     0 0 8px #D4A017,
     0 0 16px #D4A017;
-
-  animation: dotPulse 2s ease-in-out infinite;
-}
-
-@keyframes dotPulse {
-
-  50% {
-    transform: scale(1.25);
-  }
-
-}
-
-
-/* Eyebrow text */
-
-.eyebrow-text {
-  display: inline-block;
-
-  animation: eyebrowFloat 3s ease-in-out infinite;
-}
-
-@keyframes eyebrowFloat {
-
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-2px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-
 }
 
 
@@ -544,13 +525,13 @@ header nav ul li a:hover {
    ========================================================= */
 
 .guidenx-hero h1 {
-  margin: 0 0 26px;
+  max-width: 900px;
 
-  max-width: 850px;
+  margin: 0 0 26px;
 
   font-family: 'Montserrat', sans-serif;
 
-  font-size: 62px;
+  font-size: 66px;
 
   font-weight: 600;
 
@@ -563,12 +544,14 @@ header nav ul li a:hover {
   color: #F8F9FB;
 }
 
-.guidenx-hero h1 .hero-line {
+.hero-line {
   display: block;
 }
 
 
-/* Gold headline accents */
+/* =========================================================
+   GOLD HEADLINE ACCENT
+   ========================================================= */
 
 .hero-accent {
   white-space: nowrap;
@@ -585,6 +568,7 @@ header nav ul li a:hover {
   );
 
   -webkit-background-clip: text;
+
   background-clip: text;
 
   -webkit-text-fill-color: transparent;
@@ -597,8 +581,12 @@ header nav ul li a:hover {
    SERVICE DESCRIPTOR
    ========================================================= */
 
-.guidenx-hero .hero-tagline {
+.hero-tagline {
+  max-width: 1000px;
+
   margin: 12px 0 24px;
+
+  color: #3EA5CF;
 
   font-size: 21px;
 
@@ -608,8 +596,6 @@ header nav ul li a:hover {
 
   letter-spacing: 0.3px;
 
-  color: #3EA5CF;
-
   text-align: left;
 }
 
@@ -618,26 +604,26 @@ header nav ul li a:hover {
    HERO SUPPORTING TEXT
    ========================================================= */
 
-.guidenx-hero .hero-subtext {
+.hero-subtext {
   max-width: 820px;
 
   margin: 0;
 
+  color: rgba(255, 255, 255, 0.82);
+
   font-size: 18px;
 
   line-height: 1.75;
-
-  color: rgba(255, 255, 255, 0.82);
 
   text-align: left;
 }
 
 
 /* =========================================================
-   HERO CTA
+   HERO BUTTON
    ========================================================= */
 
-.guidenx-hero .hero-buttons {
+.hero-buttons {
   display: flex;
 
   justify-content: flex-start;
@@ -645,30 +631,34 @@ header nav ul li a:hover {
   margin-top: 34px;
 }
 
-.guidenx-hero .btn-primary {
+.btn-primary {
   position: relative;
-
-  overflow: hidden;
 
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
-  padding: 16px 36px;
+  overflow: hidden;
 
-  border-radius: 8px;
+  min-width: 268px;
+
+  padding: 16px 30px;
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
-  background: linear-gradient(
-    135deg,
-    #7A4D22 0%,
-    #A56A2A 25%,
-    #D39A4D 50%,
-    #E9C27A 70%,
-    #A56A2A 100%
-  );
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7A4D22 0%,
+      #A56A2A 25%,
+      #D39A4D 50%,
+      #E9C27A 70%,
+      #A56A2A 100%
+    );
 
   color: #0B1F3A;
 
@@ -678,19 +668,16 @@ header nav ul li a:hover {
 
   line-height: 1.2;
 
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-
   box-shadow:
     0 12px 24px rgba(165, 106, 42, 0.30),
     inset 0 1px 1px rgba(255, 255, 255, 0.20);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-
-/* CTA highlight */
-
-.guidenx-hero .btn-primary::after {
+.btn-primary::after {
   content: "";
 
   position: absolute;
@@ -699,40 +686,40 @@ header nav ul li a:hover {
 
   border-radius: 7px;
 
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.15),
-    transparent 35%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15),
+      transparent 35%
+    );
 
   pointer-events: none;
 }
 
-
-/* CTA shine */
-
-.guidenx-hero .btn-primary::before {
+.btn-primary::before {
   content: "";
 
   position: absolute;
 
   top: 0;
+
   left: -100%;
 
   width: 100%;
   height: 100%;
 
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
-  );
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
 
   transition: left 0.8s ease;
 }
 
-.guidenx-hero .btn-primary:hover {
+.btn-primary:hover {
   transform: translateY(-3px);
 
   box-shadow:
@@ -740,20 +727,20 @@ header nav ul li a:hover {
     0 0 24px rgba(212, 167, 63, 0.18);
 }
 
-.guidenx-hero .btn-primary:hover::before {
+.btn-primary:hover::before {
   left: 100%;
 }
 
 
 /* =========================================================
-   GUIDE. GROW. EXCEL.
-   CENTERED BRAND SIGNATURE
+   HERO BRAND TAGLINE
    ========================================================= */
 
-.guidenx-hero .guidenx-brand-tagline {
+.guidenx-brand-tagline {
   position: absolute;
 
   left: 50%;
+
   bottom: 34px;
 
   transform: translateX(-50%);
@@ -763,6 +750,7 @@ header nav ul li a:hover {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 22px;
@@ -773,22 +761,18 @@ header nav ul li a:hover {
 
   font-family: 'Montserrat', sans-serif;
 
-  text-shadow: none;
-
-  animation: none;
+  white-space: nowrap;
 }
 
 
-/* Tagline words */
+/* Tagline Words */
 
-.guidenx-hero .tagline-words {
+.tagline-words {
   display: flex;
 
   align-items: center;
 
   gap: 13px;
-
-  white-space: nowrap;
 
   font-size: 1.15rem;
 
@@ -799,25 +783,22 @@ header nav ul li a:hover {
   line-height: 1;
 }
 
-
-/* Individual tagline colors */
-
-.guidenx-hero .tagline-guide {
+.tagline-guide {
   color: #3EA5CF;
 }
 
-.guidenx-hero .tagline-grow {
+.tagline-grow {
   color: #FFFFFF;
 }
 
-.guidenx-hero .tagline-excel {
+.tagline-excel {
   color: #D4A017;
 }
 
 
-/* Lines either side */
+/* Tagline Lines */
 
-.guidenx-hero .tagline-line {
+.tagline-line {
   display: block;
 
   width: 58px;
@@ -825,11 +806,12 @@ header nav ul li a:hover {
 
   flex-shrink: 0;
 
-  background: linear-gradient(
-    90deg,
-    #3EA5CF,
-    #D4A017
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #3EA5CF,
+      #D4A017
+    );
 }
 
 
@@ -837,7 +819,7 @@ header nav ul li a:hover {
    HERO DIVIDER
    ========================================================= */
 
-.guidenx-hero .hero-divider {
+.hero-divider {
   position: absolute;
 
   left: 0;
@@ -846,80 +828,128 @@ header nav ul li a:hover {
   width: 100%;
   height: 3px;
 
-  background: linear-gradient(
-    90deg,
-    #2BB673,
-    #D4A73F,
-    #2C7BE5
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #2BB673,
+      #D4A73F,
+      #2C7BE5
+    );
 
   z-index: 5;
 }
 
 
 /* =========================================================
-   DESKTOP LARGE SCREEN
+   LARGE DESKTOP / 65-INCH DISPLAY
    ========================================================= */
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
 
   .guidenx-hero {
-    padding-left: 80px;
-    padding-right: 80px;
+    min-height: 745px;
+
+    padding-top: 50px;
+    padding-bottom: 90px;
   }
 
-  .guidenx-hero .hero-content {
+  .hero-content {
     max-width: 1280px;
-     position: relative;
+
+    /*
+       Keeps content approximately where it appears
+       in the desired large-screen screenshot.
+    */
+
+    margin-left: max(
+      0px,
+      calc((100vw - 1470px) / 2)
+    );
+
     top: -55px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 34px;
   }
 
   .guidenx-hero h1 {
     font-size: 66px;
+
+    margin-bottom: 26px;
   }
 
-    }
+  .hero-tagline {
+    font-size: 21px;
+
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+
+  .hero-subtext {
+    font-size: 18px;
+
+    max-width: 820px;
+  }
+
+  .hero-buttons {
+    margin-top: 34px;
+  }
+
+  .hero-brand-mark {
+    width: 620px;
+    height: 620px;
+
+    right: 5%;
+  }
+
+}
 
 
 /* =========================================================
    TABLET
    ========================================================= */
 
-@media (max-width: 1023px) {
-
-  header img {
-    height: 50px;
-  }
-
-  header nav ul li {
-    margin-left: 14px;
-  }
-
-  header nav ul li a {
-    font-size: 14px;
-  }
+@media (max-width: 1199px) and (min-width: 769px) {
 
   .guidenx-hero {
-    padding-left: 40px;
-    padding-right: 40px;
+    min-height: 680px;
+
+    padding:
+      50px
+      40px
+      90px;
   }
 
-  .guidenx-hero .hero-brand-mark {
+  .hero-content {
+    max-width: 760px;
+
+    margin-left: 0;
+
+    top: -20px;
+  }
+
+  .guidenx-hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-tagline {
+    font-size: 19px;
+  }
+
+  .hero-subtext {
+    max-width: 680px;
+
+    font-size: 17px;
+  }
+
+  .hero-brand-mark {
     width: 500px;
     height: 500px;
 
     right: -5%;
 
-    opacity: 0.09;
-  }
-
-  .guidenx-hero h1 {
-    font-size: 52px;
-    max-width: 700px;
-  }
-
-  .guidenx-hero .hero-subtext {
-    max-width: 680px;
+    opacity: 0.08;
   }
 
 }
@@ -931,21 +961,22 @@ header nav ul li a:hover {
 
 @media (max-width: 768px) {
 
-  /* -------------------------------------------------------
-     Body / Header
-     ------------------------------------------------------- */
-
   body {
     padding-top: 62px;
   }
 
-  header {
-    padding: 10px 18px;
 
+  /* -------------------------------------------------------
+     Header
+     ------------------------------------------------------- */
+
+  header {
     min-height: 62px;
+
+    padding: 8px 18px;
   }
 
-  header img {
+  header .logo-img {
     height: 42px;
   }
 
@@ -958,22 +989,18 @@ header nav ul li a:hover {
     font-size: 21px;
   }
 
-  .brand-search {
-    font-size: 17px;
-  }
-
 
   /* -------------------------------------------------------
-     Desktop navigation hidden
+     Desktop Navigation Hidden
      ------------------------------------------------------- */
 
   header nav {
-    display: none !important;
+    display: none;
   }
 
 
   /* -------------------------------------------------------
-     Hamburger
+     Mobile Menu
      ------------------------------------------------------- */
 
   .menu-toggle {
@@ -985,37 +1012,32 @@ header nav ul li a:hover {
     top: 50%;
 
     transform: translateY(-50%);
-
-    width: 42px;
-    height: 42px;
-
-    padding: 0;
-
-    font-size: 27px;
-
-    z-index: 2000;
   }
 
 
   /* -------------------------------------------------------
-     Mobile Hero
+     Hero
      ------------------------------------------------------- */
 
   .guidenx-hero {
     min-height: 0;
 
-    padding: 72px 24px 88px;
+    padding:
+      72px
+      24px
+      88px;
 
     display: flex;
+
     align-items: center;
   }
 
 
   /* -------------------------------------------------------
-     Mobile Watermark
+     Watermark
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-brand-mark {
+  .hero-brand-mark {
     width: 280px;
     height: 280px;
 
@@ -1029,14 +1051,17 @@ header nav ul li a:hover {
 
 
   /* -------------------------------------------------------
-     Mobile Hero Content
+     Hero Content
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-content {
+  .hero-content {
     width: 100%;
+
     max-width: 100%;
 
     margin: 0;
+
+    top: 0;
 
     align-items: center;
 
@@ -1045,24 +1070,24 @@ header nav ul li a:hover {
 
 
   /* -------------------------------------------------------
-     Mobile Eyebrow
+     Eyebrow
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-eyebrow {
+  .hero-eyebrow {
     padding: 10px 16px;
+
+    margin-bottom: 22px;
 
     font-size: 14px;
 
     line-height: 1.4;
 
-    max-width: 100%;
-
-    margin-bottom: 22px;
+    text-align: center;
   }
 
 
   /* -------------------------------------------------------
-     Mobile Headline
+     Headline
      ------------------------------------------------------- */
 
   .guidenx-hero h1 {
@@ -1081,13 +1106,16 @@ header nav ul li a:hover {
 
 
   /* -------------------------------------------------------
-     Mobile Service Descriptor
+     Service Descriptor
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-tagline {
+  .hero-tagline {
     max-width: 100%;
 
-    margin: 14px 0 18px;
+    margin:
+      14px
+      0
+      18px;
 
     font-size: 17px;
 
@@ -1098,10 +1126,10 @@ header nav ul li a:hover {
 
 
   /* -------------------------------------------------------
-     Mobile Supporting Text
+     Supporting Text
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-subtext {
+  .hero-subtext {
     max-width: 100%;
 
     margin: 0;
@@ -1115,33 +1143,31 @@ header nav ul li a:hover {
 
 
   /* -------------------------------------------------------
-     Mobile CTA
+     CTA
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-buttons {
+  .hero-buttons {
     width: 100%;
-
-    display: flex;
 
     justify-content: center;
 
     margin-top: 28px;
   }
 
-  .guidenx-hero .btn-primary {
+  .btn-primary {
     min-width: 260px;
 
-    padding: 15px 26px;
-
-    text-align: center;
+    padding:
+      15px
+      26px;
   }
 
 
   /* -------------------------------------------------------
-     Mobile Brand Tagline
+     Brand Tagline
      ------------------------------------------------------- */
 
-  .guidenx-hero .guidenx-brand-tagline {
+  .guidenx-brand-tagline {
     left: 50%;
 
     bottom: 22px;
@@ -1150,12 +1176,14 @@ header nav ul li a:hover {
 
     width: 100%;
 
-    padding: 0 12px;
+    padding:
+      0
+      12px;
 
     transform: translateX(-50%);
   }
 
-  .guidenx-hero .tagline-words {
+  .tagline-words {
     gap: 8px;
 
     font-size: 0.88rem;
@@ -1163,7 +1191,7 @@ header nav ul li a:hover {
     letter-spacing: 1px;
   }
 
-  .guidenx-hero .tagline-line {
+  .tagline-line {
     width: 30px;
 
     height: 1px;
@@ -1171,10 +1199,10 @@ header nav ul li a:hover {
 
 
   /* -------------------------------------------------------
-     Mobile Divider
+     Divider
      ------------------------------------------------------- */
 
-  .guidenx-hero .hero-divider {
+  .hero-divider {
     height: 2px;
   }
 
@@ -1182,7 +1210,7 @@ header nav ul li a:hover {
 
 
 /* =========================================================
-   VERY SMALL MOBILE DEVICES
+   VERY SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 400px) {
@@ -1192,7 +1220,7 @@ header nav ul li a:hover {
     padding-right: 14px;
   }
 
-  header img {
+  header .logo-img {
     height: 38px;
   }
 
@@ -1201,45 +1229,44 @@ header nav ul li a:hover {
     font-size: 19px;
   }
 
-  .brand-search {
-    font-size: 15px;
-  }
-
   .guidenx-hero {
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 65px;
-    padding-bottom: 84px;
+    padding:
+      65px
+      18px
+      84px;
   }
 
   .guidenx-hero h1 {
     font-size: 32px;
   }
 
-  .guidenx-hero .hero-tagline {
+  .hero-tagline {
     font-size: 15px;
   }
 
-  .guidenx-hero .hero-subtext {
+  .hero-subtext {
     font-size: 13.5px;
   }
 
-  .guidenx-hero .btn-primary {
+  .btn-primary {
     min-width: 240px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
-  .guidenx-hero .tagline-words {
+  .tagline-words {
     gap: 6px;
+
     font-size: 0.78rem;
+
     letter-spacing: 0.7px;
   }
 
-  .guidenx-hero .tagline-line {
+  .tagline-line {
     width: 20px;
   }
 
 }
 
 
+/* =========================================================
+   END
+   ========================================================= */
