@@ -880,14 +880,14 @@ header nav ul li a:hover {
   }
 
   .hero-tagline {
-    font-size: 21px;
+    font-size: 18px;
 
     margin-top: 12px;
     margin-bottom: 24px;
   }
 
   .hero-subtext {
-    font-size: 18px;
+    font-size: 16px;
 
     max-width: 820px;
   }
