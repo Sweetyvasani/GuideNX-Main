@@ -849,7 +849,7 @@ margin-left: clamp(80px, 15vw, 285px);
   }
 
   .hero-content {
-    width: min(1200px, calc(100% - 420px));
+    width: min(1100px, calc(100% - 500px));
  }
 
     /*
@@ -857,7 +857,7 @@ margin-left: clamp(80px, 15vw, 285px);
        in the desired large-screen screenshot.
     */
 
-       margin-left: clamp(80px, 15vw, 285px);
+       margin-left: clamp(100px, 13vw, 245px);
 
  margin-right: 0;
     top: -55px;
