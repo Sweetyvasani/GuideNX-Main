@@ -864,6 +864,8 @@ margin-left: clamp(80px, 15vw, 285px);
   }
 
   .hero-eyebrow {
+       margin-top: -18px;
+
     margin-bottom: 26px;
 
      font-size: 16px;
@@ -871,14 +873,14 @@ margin-left: clamp(80px, 15vw, 285px);
 
   .guidenx-hero h1 {
      max-width: 850px;
-    font-size: 60px;
+    font-size: 58px;
       line-height: 1.08;
     margin-bottom: 20px;
   }
 
   .hero-tagline {
      max-width: 900px;
-    font-size: 20px;
+    font-size: 19px;
 
     margin-top: 8px;
     margin-bottom: 18px;
@@ -886,7 +888,7 @@ margin-left: clamp(80px, 15vw, 285px);
 
   .hero-subtext {
      
-    font-size: 17px;
+    font-size: 16px;
       line-height: 1.6;
     max-width: 800px;
   }
