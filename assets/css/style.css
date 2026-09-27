@@ -376,7 +376,7 @@ header .brand-name {
   
     z-index: 2;
   
-    margin-left: 160px;
+    margin-left: 180px;
   margin-right: auto;
 margin-bottom: 0;
   
@@ -525,7 +525,7 @@ margin-bottom: 0;
   line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 0px;
-  max-width: 950px;
+  max-width: 1100px;
     text-align: left;
   color: rgba(255,255,255,0.82);
 }
