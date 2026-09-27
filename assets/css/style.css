@@ -427,6 +427,7 @@ margin-left: clamp(80px, 15vw, 285px);
      without changing Hero height.
   */
 
+   left: -85px;
   top: -45px;
 
   display: flex;
@@ -835,77 +836,6 @@ margin-left: clamp(80px, 15vw, 285px);
 }
 
 
-/* =========================================================
-   LARGE DESKTOP / 65-INCH DISPLAY
-   ========================================================= */
-
-@media (min-width: 1600px) {
-
-  .guidenx-hero {
-    min-height: 745px;
-
-    padding-top: 50px;
-    padding-bottom: 90px;
-  }
-
-  .hero-content {
-    width: min(1100px, calc(100% - 500px));
- }
-
-    /*
-       Keeps content approximately where it appears
-       in the desired large-screen screenshot.
-    */
-
-       margin-left: clamp(100px, 13vw, 245px);
-
- margin-right: 0;
-    top: -70px;
-  }
-
-  .hero-eyebrow {
-       margin-top: -18px;
-
-    margin-bottom: 26px;
-
-     font-size: 16px;
-  }
-
-  .guidenx-hero h1 {
-     max-width: 850px;
-    font-size: 58px;
-      line-height: 1.08;
-    margin-bottom: 20px;
-  }
-
-  .hero-tagline {
-     max-width: 900px;
-    font-size: 19px;
-
-    margin-top: 8px;
-    margin-bottom: 18px;
-  }
-
-  .hero-subtext {
-     
-    font-size: 16px;
-      line-height: 1.6;
-    max-width: 800px;
-  }
-
-  .hero-buttons {
-    margin-top: 24px;
-  }
-
-  .hero-brand-mark {
-    width: 620px;
-    height: 620px;
-
-    right: 5%;
-  }
-
-}
-
 
 /* =========================================================
    TABLET
@@ -1267,20 +1197,4 @@ margin-left: clamp(80px, 15vw, 285px);
 
 }
 
-/* =========================================================
-   LARGE SCREEN HERO POSITION
-   ========================================================= */
 
-@media (min-width: 1200px) {
-
-  .guidenx-hero .hero-content {
-    position: relative;
-    left: -85px;
-  }
-
-}
-
-
-/* =========================================================
-   END
-   ========================================================= */
