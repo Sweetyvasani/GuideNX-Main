@@ -336,7 +336,7 @@ header .brand-name {
    Hero Section - GuideNX Search
 ================================ */
 
-.recruit-hero {
+.guidenx-hero {
   position: relative;
   background-color: #0B1F3A;
   color: #ffffff;
@@ -350,7 +350,7 @@ header .brand-name {
 }
 
 /* Subtle grid overlay */
-.recruit-hero::before {
+.guidenx-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -362,14 +362,14 @@ header .brand-name {
 }
 
 /* Soft blueprint texture overlay */
-.recruit-hero .hero-overlay {
+.guidenx-hero .hero-overlay {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05), transparent 60%);
   pointer-events: none;
 }
 
-.recruit-hero .hero-content {
+.guidenx-hero .hero-content {
   position: relative;
   max-width: 1200px;
   width: 100%;
@@ -399,7 +399,7 @@ margin-bottom: 0;
 }
 
 
-.recruit-hero .hero-eyebrow {
+.guidenx-hero .hero-eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -482,7 +482,7 @@ margin-bottom: 0;
 
 }
 
-.recruit-hero h1 {
+.guidenx-hero h1 {
   font-size: 68px;
   font-weight: 700;
   line-height: 1.08;
@@ -516,11 +516,11 @@ margin-bottom: 0;
 
 
 
-.recruit-hero h1 .hero-line {
+.guidenx-hero h1 .hero-line {
   display: block;
   }
 
-.recruit-hero .hero-subtext {
+.guidenx-hero .hero-subtext {
   font-size: 20px;
   line-height: 1.6;
   opacity: 0.9;
@@ -530,7 +530,7 @@ margin-bottom: 0;
   color: rgba(255,255,255,0.82);
 }
 
-.recruit-hero .hero-audience {
+.guidenx-hero .hero-audience {
   font-size: 15px;
   opacity: 0.7;
   margin-bottom: 42px;
@@ -546,7 +546,7 @@ margin-bottom: 0;
 }
 
 /* Buttons */
-.recruit-hero .hero-buttons {
+.guidenx-hero .hero-buttons {
   display: flex;
   justify-content: flex-start;
    margin-top: 32px;
@@ -559,7 +559,7 @@ margin-bottom: 0;
   }
 }
 
-.recruit-hero .btn-primary {
+.guidenx-hero .btn-primary {
   background: linear-gradient(
 135deg,
 #7a4d22 0%,
@@ -585,7 +585,7 @@ margin-bottom: 0;
   overflow: hidden;
 }
 
-.recruit-hero .btn-primary::after {
+.guidenx-hero .btn-primary::after {
   content: "";
   position: absolute;
   inset: 1px;
@@ -601,14 +601,14 @@ margin-bottom: 0;
   pointer-events: none;
 }
 
-.recruit-hero .btn-primary:hover {
+.guidenx-hero .btn-primary:hover {
   box-shadow:
       0 14px 30px rgba(212,167,63,0.35),
       0 0 24px rgba(212,167,63,0.18);
   transform: translateY(-3px);
 }
 
-.recruit-hero .btn-primary::before {
+.guidenx-hero .btn-primary::before {
   content: "";
 
   position: absolute;
@@ -629,7 +629,7 @@ margin-bottom: 0;
   transition: all 0.8s ease;
 }
 
-.recruit-hero .btn-primary:hover::before {
+.guidenx-hero .btn-primary:hover::before {
   left: 100%;
 }
 
@@ -718,7 +718,7 @@ margin-bottom: 0;
 
 
 /* Gradient divider */
-.recruit-hero .hero-divider {
+.guidenx-hero .hero-divider {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -730,16 +730,16 @@ margin-bottom: 0;
 /* Responsive */
 @media (max-width: 768px) {
 
-    .recruit-hero{
+    .guidenx-hero{
         min-height: auto;
         padding: 70px 24px 70px;
     }
 
-    .recruit-hero .hero-content{
+    .guidenx-hero .hero-content{
         max-width:100%;
     }
 
-    .recruit-hero .hero-eyebrow{
+    .guidenx-hero .hero-eyebrow{
 
         padding:12px 18px;
         font-size:15px;
@@ -752,7 +752,7 @@ margin-bottom: 0;
         margin-bottom:24px;
     }
 
-    .recruit-hero h1{
+    .guidenx-hero h1{
 
         font-size:34px;
         line-height:1.08;
@@ -762,7 +762,7 @@ margin-bottom: 0;
         letter-spacing:-0.5px;
     }
 
-    .recruit-hero .hero-subtext{
+    .guidenx-hero .hero-subtext{
 
         font-size:14px;
         line-height:1.7;
@@ -780,7 +780,7 @@ margin-bottom: 0;
         margin:16px 0;
     }
 
-    .recruit-hero .hero-buttons{
+    .guidenx-hero .hero-buttons{
 
         width: 100%;
     display: flex;
@@ -789,7 +789,7 @@ margin-bottom: 0;
       margin-top:30px;
     }
 
-    .recruit-hero .btn-primary{
+    .guidenx-hero .btn-primary{
          width: auto;
     min-width: 280px;
     max-width: 320px;
@@ -797,11 +797,11 @@ margin-bottom: 0;
     text-align: center;
     }
 
-  .recruit-hero .guidenx-brand-tagline{
+  .guidenx-hero .guidenx-brand-tagline{
   bottom: 14px;
     }
 
-   .recruit-hero .tagline-words{
+   .guidenx-hero .tagline-words{
   font-size: 0.82rem;
 }
 
@@ -813,7 +813,7 @@ margin-bottom: 0;
 ========================================================= */
 
 /* Large GuideNX brand mark */
-.recruit-hero .hero-brand-mark {
+.guidenx-hero .hero-brand-mark {
   position: absolute;
   
   right: 3%;
@@ -833,7 +833,7 @@ margin-bottom: 0;
   z-index: 1;
 }
 
-.recruit-hero .hero-brand-mark img {
+.guidenx-hero .hero-brand-mark img {
   display: block;
   
   width: 100%;
@@ -853,7 +853,7 @@ margin-bottom: 0;
 
 @media (max-width: 768px) {
 
-  .recruit-hero .hero-brand-mark {
+  .guidenx-hero .hero-brand-mark {
     width: 260px;
     height: 260px;
     right: 50%;
@@ -862,18 +862,18 @@ margin-bottom: 0;
     opacity: 0.08;
   }
 
-  .recruit-hero .hero-content {
+  .guidenx-hero .hero-content {
     align-items: center;
     text-align: center;
   }
 
-  .recruit-hero h1,
-  .recruit-hero .hero-subtext,
-  .recruit-hero .hero-tagline {
+  .guidenx-hero h1,
+  .guidenx-hero .hero-subtext,
+  .guidenx-hero .hero-tagline {
     text-align: center;
   }
 
-  .recruit-hero .hero-buttons {
+  .guidenx-hero .hero-buttons {
     justify-content: center;
   }
 }
@@ -889,7 +889,7 @@ margin-bottom: 0;
 
 @media (max-width: 768px) {
 
-  .recruit-hero .hero-content {
+  .guidenx-hero .hero-content {
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -899,7 +899,7 @@ margin-bottom: 0;
     text-align: center;
   }
 
-  .recruit-hero .hero-brand-mark {
+  .guidenx-hero .hero-brand-mark {
     width: 260px;
     height: 260px;
 
@@ -911,7 +911,7 @@ margin-bottom: 0;
     opacity: 0.07;
   }
 
-  .recruit-hero .watermark-dot {
+  .guidenx-hero .watermark-dot {
     width: 12px;
     height: 12px;
   }
